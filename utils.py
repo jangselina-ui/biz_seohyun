@@ -38,7 +38,7 @@ def quarter_average(branches, quarter):
     """분기 평균."""
     total = 0
     for b in branches:
-        total += b["1분기"]
+        total += b[quarter]
     return total / len(branches)
 
 
