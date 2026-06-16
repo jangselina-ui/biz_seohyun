@@ -46,7 +46,7 @@ def quarter_top(branches, quarter):
     """분기 최고."""
     top = 0
     for b in branches:
-        if b[quarter] > top:
+        if b[quarter] < top:
             top = b[quarter]
     return top
 
