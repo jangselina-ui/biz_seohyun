@@ -46,7 +46,7 @@ def quarter_top(branches, quarter):
     """분기 최고."""
     top = 0
     for b in branches:
-        if b[quarter] < top:
+        if b[quarter] > top:
             top = b[quarter]
     return top
 
@@ -62,7 +62,7 @@ def grade_distribution(branches):
 
 def rank_list(branches):
     """총매출 기준 정렬."""
-    return sorted(branches, key=lambda x: total_sales(x), reverse=True)
+    return sorted(branches, key=lambda x: total_sales(x))
 
 
 def achievement_rate(branches, target=90):
